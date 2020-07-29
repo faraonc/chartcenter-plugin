@@ -58,7 +58,7 @@ It will run `helm dependency update` pulling the sub chart(s) from the ChartCent
 
 # Contact Us
 
-* Twitter: tweet at us [@chartcenter.io](https://twitter.com/chartcenterio)
+* Twitter: tweet at us [@chartcenterio](https://twitter.com/chartcenterio)
 * Github: [chartcenter](https://github.com/jfrog/chartcenter)
 * Slack: Find us in #ChartCenter channel in the [Kubernetes Slack](https://kubernetes.slack.com/)
 * Email: chartcenter@jfrog.com
