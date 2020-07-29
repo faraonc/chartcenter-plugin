@@ -1,0 +1,7 @@
+---
+name: "center"
+version: "0.1.0"
+usage: "Please see https://github.com/jfrog/chartcenter-plugin for usage"
+description: "Package dependencies Helm charts from ChartCenter"
+command: "$HELM_PLUGIN_DIR/scripts/center.sh"
+useTunnel: false
