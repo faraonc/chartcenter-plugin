@@ -5,8 +5,8 @@
 
 [Helm](https://helm.sh) v2 and v3 plugin for packaging dependency charts from the [ChartCenter](https://chartcenter.io).
 
-`ChartCenter` is a free, central repository of public Helm charts for the Kubernetes community.
-You can read more about `ChartCenter` and how to use it:
+[ChartCenter](https://chartcenter.io) is a free, central repository of public Helm charts for the Kubernetes community.
+You can read more about [ChartCenter](https://chartcenter.io) and how to use it:
 - Rimas Mocevicius [blog](https://rimusz.net/chartcenter)
 - JFrog [blog](https://jfrog.com/resource-center/?src=chartcenter)
 
@@ -30,7 +30,7 @@ dependencies:
   condition: rabbitmq.enabled
 ```
 
-`bitnami` from the example above is the extra namespace which was added to support ChartCenter and `helm package` doesn't understand it yet.
+`bitnami` from the example above is the extra namespace which was added to support [ChartCenter](https://chartcenter.io) and `helm package` doesn't understand it yet.
 Till the fix is done in Helm v3 client, ChartCenter plugin can be used to instead then.
 **Note:** Helm v2 client is not accepting any new features so plugin needs to be used all the time then.
  
