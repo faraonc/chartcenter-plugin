@@ -3,16 +3,16 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Release](https://img.shields.io/github/release/jfrog/chartcenter-plugin.svg?style=flat-square)](https://github.com/jfrog/chartcenter-plugin/releases/latest)
 
-[Helm](https://helm.sh) v2 and v3 plugin for packaging dependency charts from the [ChartCenter](https://chartcenter.io).
+[Helm](https://helm.sh) v2 and v3 plugin for packaging dependency charts from [ChartCenter](https://chartcenter.io).
 
 [ChartCenter](https://chartcenter.io) is a free, central repository of public Helm charts for the Kubernetes community.
 You can read more about [ChartCenter](https://chartcenter.io) and how to use it:
 - Rimas Mocevicius [blog](https://rimusz.net/chartcenter)
 - JFrog [blog](https://jfrog.com/resource-center/?src=chartcenter)
 
-It alows 250+ public helm repositories be accessed by just one central helm repository, and to make it work it adds an extra namespace `center`. Helm cli v2 and v3 `package` command does not understand that extra namespace and cannot be used to package charts from the ChartCenter.
+It allows 250+ public Helm repositories be accessed by just one central Helm repository, and to make it work it adds an extra namespace `center`. Helm cli v2 and v3 `package` command does not understand that extra namespace and cannot be used to package charts from the ChartCenter.
 
-The example Helm `requirements.yaml/Chart.yaml` file of using ChartCenter as helm repository:
+The example Helm `requirements.yaml/Chart.yaml` file of using ChartCenter as your Helm repository:
 
 ```yaml
 dependencies:
@@ -30,9 +30,9 @@ dependencies:
   condition: rabbitmq.enabled
 ```
 
-`bitnami` from the example above is the extra namespace which was added to support [ChartCenter](https://chartcenter.io) and `helm package` doesn't understand it yet.
-Till the fix is done in Helm v3 client, ChartCenter plugin can be used to instead then.
-**Note:** Helm v2 client is not accepting any new features so plugin needs to be used all the time then.
+`bitnami` from the example above is the extra namespace which was added to support [ChartCenter](https://chartcenter.io) and `helm package` doesn't understand it yet. Till the fix is done in Helm v3 client, ChartCenter's plugin can be used instead.
+
+**Note:** Helm v2 client is not accepting any new features so the plugin needs to be used at all times in Helm v2.
  
 
 ## Installation
