@@ -30,7 +30,7 @@ dependencies:
   condition: rabbitmq.enabled
 ```
 
-`bitnami` from the example above is the extra namespace which was added to support [ChartCenter](https://chartcenter.io) and `helm package` doesn't understand it yet. Till the fix is done in Helm v3 client, ChartCenter's plugin can be used instead.
+`bitnami` from the example above is the extra namespace which was added to support [ChartCenter](https://chartcenter.io) and `helm package` doesn't understand it yet. Till the [fix](https://github.com/helm/helm/issues/8537) is done in Helm v3 client, ChartCenter's plugin can be used instead.
 
 **Note:** Helm v2 client is not accepting any new features so the plugin needs to be used at all times in Helm v2.
  
