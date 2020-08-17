@@ -5,7 +5,7 @@
 
 ## What this plugin solves
 
-[Helm](https://helm.sh) v2 and v3 plugin for packaging dependency charts pulled from [ChartCenter](https://chartcenter.io).
+[Helm](https://helm.sh) v2 and v3 plugin is for packaging dependency charts pulled from [ChartCenter](https://chartcenter.io).
 
 [ChartCenter](https://chartcenter.io) is a free, immutable, central repository of public Helm charts for the Kubernetes community.
 You can read more about [ChartCenter](https://chartcenter.io) and how to use it:
@@ -22,7 +22,7 @@ helm install postgresql center/bitnami/postgresql
 
 In the example above we are installing `bitnami/postgresql` from the helm repo `https://repo.chartcenter.io`, and it works just fine.
 
-But if we want to use dependency charts from the `https://repo.chartcenter.io` this is where Helm cli v2 and v3 `package` command does not understand the extra namespace specified in `requirements.yaml/Chart.yaml` and fails to package the chart. Helm `dependency` works fine and pulls all the charts and stores in the `charts` folder.
+But if we want to use dependency charts from the `https://repo.chartcenter.io` this is where Helm cli v2 and v3 `helm package` command does not understand the extra namespace specified in `requirements.yaml/Chart.yaml` and fails to package the chart. Helm `helm dependency` works just fine and pulls all the charts and stores in the `charts` folder.
 
 The example Helm `requirements.yaml/Chart.yaml` file of using ChartCenter as Helm repository:
 
@@ -32,7 +32,7 @@ dependencies:
   version: 8.7.3
   repository: https://repo.chartcenter.io
   condition: postgresql.enabled
-- name: stable/rabbitmq-ha
+- name: bitnami/rabbitmq-ha
   version: 1.46.4
   repository: https://repo.chartcenter.io
   condition: rabbitmq-ha.enabled
