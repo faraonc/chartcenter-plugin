@@ -4,7 +4,7 @@ set -e
 
 CHART_NAME="${1//\/}"
 
-if [[ "${CHART_NAME}" == "" ]] 
+if [[ "${CHART_NAME}" == "" ]]
 then
     echo "Helm center plugin"
     echo
@@ -15,8 +15,8 @@ then
     exit 0
 fi
 
-CHART_VERSION=$(cat ${CHART_NAME}/Chart.yaml | grep -w "version:" | tr -d "[:blank:]" | cut -d ':' -f2)
-if [[ "${CHART_VERSION}" == "" ]] 
+CHART_VERSION=$(cat ${CHART_NAME}/Chart.yaml | grep -w "^version:" | tr -d "[:blank:]" | cut -d ':' -f2)
+if [[ "${CHART_VERSION}" == "" ]]
 then
     echo "Chart version is not found in Chart.yaml!"
     exit 1
