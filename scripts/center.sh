@@ -2,7 +2,7 @@
 
 set -e
 
-CHART_NAME="${1//\/}"
+CHART_NAME="${1%/}"
 
 if [[ "${CHART_NAME}" == "" ]]
 then
