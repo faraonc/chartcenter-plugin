@@ -33,7 +33,3 @@ do
   tar -xzf $f -C ${CHART_NAME}/charts
   rm -f $f
 done
-
-echo
-echo "Packaging ${CHART_NAME}-${CHART_VERSION}.tgz"
-tar -czf ${CHART_NAME}-${CHART_VERSION}.tgz ${CHART_NAME}
