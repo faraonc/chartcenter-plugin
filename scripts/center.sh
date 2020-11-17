@@ -15,13 +15,6 @@ then
     exit 0
 fi
 
-CHART_VERSION=$(cat ${CHART_NAME}/Chart.yaml | grep -w "^version:" | tr -d "[:blank:]" | cut -d ':' -f2)
-if [[ "${CHART_VERSION}" == "" ]]
-then
-    echo "Chart version is not found in Chart.yaml!"
-    exit 1
-fi
-
 echo "Running helm dependency update"
 helm dependency update ${CHART_NAME}
 echo
